@@ -1,9 +1,9 @@
-# require 'pry'
+require 'pry'
 
 #########################
 # Data for the newsletter
 #########################
-# require "pry"
+require "pry"
 CAMPUS = {
   "name": "DC",
   "address": "1440 G St NW, Washington, DC 20005",
@@ -31,12 +31,7 @@ def calculate_recipients
   # Using the SUBSCRIBERS and UNSUBSCRIBED arrays,
   # write a method that will return an array of only the subscribers who haven't unsubscribed
   current_subscriber = []
-  SUBSCRIBERS.each do |person|
-    if UNSUBSCRIBED.include? person
-    else
-      current_subscriber.push(person)
-    end
-  end
+  SUBSCRIBERS.each {|person| UNSUBSCRIBED.include?(person) ? nil : current_subscriber.push(person)}
   current_subscriber
 end
 
