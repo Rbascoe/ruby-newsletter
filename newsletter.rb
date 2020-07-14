@@ -36,7 +36,7 @@ def calculate_recipients
 end
 
 def first_n_articles(number_of_articles)
-  ARTICLES.first(number_of_articles.to_i)
+  ARTICLES.first(number_of_articles)
 end
 
 def print_recipients
@@ -97,7 +97,7 @@ end
 def run
   # We want our program to print three articles by default,
   # but we can change that number here
-  print_newsletter("3")
+  print_newsletter(3)
 end
 
 # When we run "ruby newsletter.rb" in the command line,
